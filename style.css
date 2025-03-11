@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header div {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+header img {
+  width: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #00a8d2;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 4em;
+}
+
+#game {
+  width: 1700px;
+  height: 700px;
+  box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5);
+  cursor: none;
+}
+
+#pixel-size-container {
+  display: none;
+}
+
+#pixel-size {
+  display: flex;
+  -webkit-appearance: none;
+  margin: 20px auto;
+  width: 1200px;
+}
+#pixel-size:focus {
+  outline: 0;
+}
+#pixel-size:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+}
+#pixel-size:focus::-ms-fill-lower {
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+}
+#pixel-size:focus::-ms-fill-upper {
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+}
+#pixel-size::-webkit-slider-runnable-track {
+  cursor: pointer;
+  height: 25px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 1200px;
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 25px;
+}
+#pixel-size::-webkit-slider-thumb {
+  background: #224889;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  -webkit-appearance: none;
+  margin-top: -12.5px;
+}
+#pixel-size::-moz-range-track {
+  cursor: pointer;
+  height: 25px;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 1200px;
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 25px;
+}
+#pixel-size::-moz-range-thumb {
+  background: #224889;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+#pixel-size::-ms-track {
+  cursor: pointer;
+  height: 25px;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 1200px;
+  background: transparent;
+  border-color: transparent;
+  border-width: 20px 0;
+  color: transparent;
+}
+#pixel-size::-ms-fill-lower {
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 50px;
+}
+#pixel-size::-ms-fill-upper {
+  background: linear-gradient(to bottom, #79aaff, #79aaff 49.9%, #609aff 50%, #609aff 100%);
+  border: 5px solid #224889;
+  border-radius: 50px;
+}
+#pixel-size::-ms-thumb {
+  background: #224889;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin-top: 0;
+}
+
+#colorsChoice div {
+  background-color: #00a8d2;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #000;
+  position: relative;
+}
+#colorsChoice div:hover {
+  transform: scale(1.2);
+}
+
+#colorsChoice div:hover {
+  border-color: #000000;
+}
+
+#cursor {
+  position: absolute;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(245, 245, 245, 0.3803921569);
+  border: 1px solid #478200;
+  cursor: none;
+}
+
+.sidebar {
+  position: fixed;
+  right: 20px;
+  top: 200px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 20px;
+}
+
+#auth-container {
+  margin-top: 30px;
+}
+#auth-container .fa-solid {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+#auth-container .fa-solid:hover {
+  opacity: 1;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform: translate(50%, 50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #977c4f;
+  background-image: url(https://www.minecraft.net/content/dam/archive/backgrounds/bg-wool-white.png);
+}
+#modal #close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  color: #000;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+#modal #close:hover {
+  color: #000;
+  opacity: 0.6;
+}
+#modal form {
+  display: flex;
+  flex-direction: column;
+}
+#modal form .btn {
+  margin-top: 10px;
+}
+#modal form input {
+  outline: none;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 1.2rem;
+  border-radius: 0;
+  min-width: 400px;
+}
+
+.btn {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  text-decoration: none;
+  padding: 0.8rem 3.25rem;
+  font-size: 19.2px;
+  line-height: 1.5;
+}
+.btn-primary {
+  background: #00afda;
+  box-shadow: inset 0 4px #41daff, inset 0 -4px #005d74, 0 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 0 #005d74;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #41daff;
+}
+.btn-secondary {
+  background: #977c4f;
+  box-shadow: inset 0 4px #c2ad8a, inset 0 -4px #54452c, 0 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 0 #54452c;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #c2ad8a;
+}
+
+#pixel-size-container {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pixel-size-value {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  background-color: #2c5db2;
+  top: 37px;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 5px;
+}/*# sourceMappingURL=style.css.map */

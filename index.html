@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oeuvre participative pixelisées Micro-Folie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Oeuvres participatives pixelisées Micro-Folie</h1>
+        <div>
+            <a href="https://www.verdun.fr/mediatheque-grand-verdun/" target="_blank">
+                <img src="img/logo-aencre.png" alt="">
+                <img src="img/logo-aglo.png" alt="">
+            </a>
+        </div>
+    </header>
+    <div id="cursor"></div>
+
+    <canvas id="game"></canvas>
+
+    <div id="pixel-size-container">
+        <input type="range"  min="1" max="30" id="pixel-size" value="1">
+        <p id="pixel-size-value">1
+        </p>
+    </div>
+    
+    
+    <div class="sidebar">
+        <div id="colorsChoice"></div>
+
+        <div id="auth-container">
+            <i id="openModal" class="fa-solid fa-right-to-bracket"></i>
+        
+            <i id="logout" style="display: none;" class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+
+    <!-- Bouton de connexion -->
+
+    <div id="modal">
+        <i id="close" class="fa-solid fa-xmark"></i>
+        <form id="authForm">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login" class="btn btn-primary">Login</button>
+            <button id="signup" class="btn btn-secondary">Sign Up</button>
+        </form>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
