@@ -7,8 +7,8 @@ const GAME_COLLECTION_NAME = 'application_micro-folie';
  * Etape 2
  * Editer la taille du jeu
  */
-const LARGEUR_DU_JEU = 4096px;
-const HAUTEUR_DU_JEU = 2160px;
+const LARGEUR_DU_JEU = 1700;
+const HAUTEUR_DU_JEU = 700;
 /**
  * Etape 3
  * Editer la configuration de Firebase si besoin
